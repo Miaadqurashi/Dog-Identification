@@ -16,4 +16,4 @@ dog_app.ipynb: Jupyter notebook that has all the project code and results.
 ## Sample result 
 
 ![](https://images.pexels.com/photos/8700/wall-animal-dog-pet.jpg?cs=srgb&dl=animal-collar-dog-8700.jpg&fm=jpg) 
-This dog is a/an Labrador retriever breed 
+This dog is a/an Golden retriever breed 
