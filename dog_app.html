@@ -13460,7 +13460,7 @@ There are 836 test dog images.
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Question 2:</strong> This algorithmic choice necessitates that we communicate to the user that we accept human images only when they provide a clear view of a face (otherwise, we risk having unneccessarily frustrated users!). In your opinion, is this a reasonable expectation to pose on the user? If not, can you think of a way to detect humans in images that does not necessitate an image with a clearly presented face?</p>
-<p><strong>Answer:</strong></p>
+<p><strong>Answer:</strong> Yes that is a reasonable expectation as the model would only work well already only if the face is clear. SO we chose to use the OpenCV model .</p>
 <p>We suggest the face detector from OpenCV as a potential way to detect human images in your algorithm, but you are free to explore other approaches, especially approaches that make use of deep learning :).  Please use the code cell below to design and test your own face detection algorithm.  If you decide to pursue this <em>optional</em> task, report performance on each of the datasets.</p>
 
 </div>
@@ -14401,7 +14401,9 @@ test_{network} = bottleneck_features['test']</code></pre>
 
 </code></pre>
 <p><strong>Question 5:</strong> Outline the steps you took to get to your final CNN architecture and your reasoning at each step.  Describe why you think the architecture is suitable for the current problem.</p>
-<p><strong>Answer:</strong></p>
+<p><strong>Answer:</strong> After flattening the data with the GlobalAveragePooling2D layer. We have room to select the layers but we need to end with a softmax layer with 133 neurons. 
+We choose to add another 256 node layer followed by a dropout layer to lessen the overfitting effect. 
+This architecture is suitable due to the weights from imagenet which act as a strong feature extractor. The last two dense layers are used to fine tune the model for our use case of identifying dog breeds.</p>
 
 </div>
 </div>
@@ -14751,7 +14753,12 @@ Epoch 20/20
 <h2 id="Step-7:-Test-Your-Algorithm">Step 7: Test Your Algorithm<a class="anchor-link" href="#Step-7:-Test-Your-Algorithm">&#182;</a></h2><p>In this section, you will take your new algorithm for a spin!  What kind of dog does the algorithm think that <strong>you</strong> look like?  If you have a dog, does it predict your dog's breed accurately?  If you have a cat, does it mistakenly think that your cat is a dog?</p>
 <h3 id="(IMPLEMENTATION)-Test-Your-Algorithm-on-Sample-Images!">(IMPLEMENTATION) Test Your Algorithm on Sample Images!<a class="anchor-link" href="#(IMPLEMENTATION)-Test-Your-Algorithm-on-Sample-Images!">&#182;</a></h3><p>Test your algorithm at least six images on your computer.  Feel free to use any images you like.  Use at least two human and two dog images.</p>
 <p><strong>Question 6:</strong> Is the output better than you expected :) ?  Or worse :( ?  Provide at least three possible points of improvement for your algorithm.</p>
-<p><strong>Answer:</strong></p>
+<p><strong>Answer:</strong> The model is as good as expected with the 71% accuracy. However, there is room for improvement.</p>
+<ul>
+<li>We can find a bigger dataset in the order of millions to achieve a more robust model. </li>
+<li>We can try another pretrained model.</li>
+<li>We can use data augmentation to improve the model's robustness.</li>
+</ul>
 
 </div>
 </div>
@@ -14979,7 +14986,7 @@ None
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The woman has Asian features and the model says she resembles the Chihuahua breed. 
-The cChihuahua breed hace small cute features like the featured woman :D.</p>
+The Chihuahua breed hace small cute features like the featured woman :D.</p>
 
 </div>
 </div>
