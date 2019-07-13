@@ -19,6 +19,11 @@ Some data statistics:
 * There are 6680 training dog images.
 * There are 835 validation dog images.
 * There are 836 test dog images.
+Also, here are some samples from train, validation and test sets. Code available in notebook:
+![Train samples](images/train.png)
+![Test samples](images/test.png)
+![Validation samples](images/valid.png)
+
 
 ## Preprocessing: 
 Images were resized to have the shape of 224,224,3 to match the image sizes of the imagenet dataset as we use its pre-trained models. 
