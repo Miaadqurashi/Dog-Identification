@@ -20,9 +20,25 @@ Some data statistics:
 * There are 835 validation dog images.
 * There are 836 test dog images.
 Also, here are some samples from train, validation and test sets. Code available in notebook:
+
+
 ![Train samples](images/train.png)
 ![Test samples](images/test.png)
 ![Validation samples](images/valid.png)
+
+This gives us an idea about the structuring of the data. In more details, There are three folders, train, valid and test. Each of which has 133 folders for each class target. Each folder has all the images belonging to ths categories 
+
+## Data Exploration:
+After taking a look at the sample images, we find that they do not all have the same aspect ratio. Thus can have negative effects in the difference of the transformations of the data. One solution is to use center cropping instead of scaaling directly. 
+
+Next, we take a look at the distribution of the target class labels. Here are the histograms:
+
+![Train Hist](train_hist.png)
+![Validation Hist](valid_hist.png)
+![Test Hist](test_hist.png)
+
+We find that training data is well distrbuted. All classes has at least around 30 images with the majority around 50 and 65. We cannot say that the data is heavily misbalanced, there might be some mis-balanced but it can pass for now. 
+
 
 
 ## Preprocessing: 
