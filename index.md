@@ -33,9 +33,9 @@ After taking a look at the sample images, we find that they do not all have the 
 
 Next, we take a look at the distribution of the target class labels. Here are the histograms:
 
-![Train Hist](train_hist.png)
-![Validation Hist](valid_hist.png)
-![Test Hist](test_hist.png)
+![Train Hist](images/train_hist.png)
+![Validation Hist](images/valid_hist.png)
+![Test Hist](images/test_hist.png)
 
 We find that training data is well distrbuted. All classes has at least around 30 images with the majority around 50 and 65. We cannot say that the data is heavily misbalanced, there might be some mis-balanced but it can pass for now. 
 
