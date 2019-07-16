@@ -90,13 +90,13 @@ After we settled on using the VGG19 model of our breed detection we started our 
 Examples can be found at the notebook [here](dog_app.html)
 
 We will now analyze to examples:
-![foggie](images/wall-animal-dog-pet.jpg)
+![foggie](wall-animal-dog-pet.jpg)
 
 The model predicted a labrador retriever which is a correct classification. We now see that our model was able to predict well on images from a different pool of data.
 
 Next, we look at a human subject: 
 
-![human](images/beardedhuman.jpeg)
+![human](beardedhuman.jpeg)
 
 The predicted dog that resembles that human subject is Xoloitzcuintli breed. That breed is also called Mexican Hairless Dog. This might first seem counter-intuitive as the man in the picture is pretty hairy. However, Mexican Hairless Dogs have dark coat colors that his jacket looks similar too which explans that prediction
 
